@@ -1,9 +1,9 @@
 
-let express = require('express');
+const express = require('express');
 
-let bodyParser = require('body-parser');
+const bodyParser = require('body-parser');
 
-let mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
 let app = express();
 let config = require('./config');
@@ -16,9 +16,9 @@ app.use(bodyParser.json());
 
 // Connect to Mongoose and set connection variable
 mongoose.connect('mongodb://localhost/resthub',{ useNewUrlParser: true });
-var db = mongoose.connection;
+const db = mongoose.connection;
 
-var port = process.env.PORT || 8080;
+const port = process.env.PORT || 8080;
 // Send message for default URL
 app.get('/', (req, res) => res.send('Hello World with Express'));
 // Use Api routes in the App
