@@ -20,7 +20,7 @@ exports.index = function (req, res) {
 };
 // Handle create contact actions
 exports.new = function (req, res) {
-    var contact = new Contact();
+    let contact = new Contact();
     contact.name = req.body.name ? req.body.name : contact.name;
     contact.gender = req.body.gender;
     contact.email = req.body.email;
